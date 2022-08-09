@@ -9,13 +9,22 @@
 /* Begin PBXBuildFile section */
 		B6ABC37D28A1F79100CD0D00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC37C28A1F79100CD0D00 /* AppDelegate.swift */; };
 		B6ABC37F28A1F79100CD0D00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC37E28A1F79100CD0D00 /* SceneDelegate.swift */; };
-		B6ABC38128A1F79100CD0D00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC38028A1F79100CD0D00 /* ViewController.swift */; };
-		B6ABC38428A1F79100CD0D00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6ABC38228A1F79100CD0D00 /* Main.storyboard */; };
 		B6ABC38628A1F79700CD0D00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6ABC38528A1F79700CD0D00 /* Assets.xcassets */; };
 		B6ABC38928A1F79700CD0D00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6ABC38728A1F79700CD0D00 /* LaunchScreen.storyboard */; };
 		B6ABC39428A1F79800CD0D00 /* Gapo_NotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC39328A1F79800CD0D00 /* Gapo_NotificationTests.swift */; };
 		B6ABC39E28A1F79800CD0D00 /* Gapo_NotificationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC39D28A1F79800CD0D00 /* Gapo_NotificationUITests.swift */; };
 		B6ABC3A028A1F79800CD0D00 /* Gapo_NotificationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC39F28A1F79800CD0D00 /* Gapo_NotificationUITestsLaunchTests.swift */; };
+		B6ABC3AE28A1F89600CD0D00 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3AC28A1F89600CD0D00 /* MyViewController.swift */; };
+		B6ABC3AF28A1F89600CD0D00 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6ABC3AD28A1F89600CD0D00 /* MyViewController.xib */; };
+		B6ABC3B128A1FB1D00CD0D00 /* noti.json in Resources */ = {isa = PBXBuildFile; fileRef = B6ABC3B028A1FB1D00CD0D00 /* noti.json */; };
+		B6ABC3D228A1FC5400CD0D00 /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3CA28A1FC5300CD0D00 /* DataItem.swift */; };
+		B6ABC3D328A1FC5400CD0D00 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3CB28A1FC5400CD0D00 /* Subscription.swift */; };
+		B6ABC3D428A1FC5400CD0D00 /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3CC28A1FC5400CD0D00 /* Highlight.swift */; };
+		B6ABC3D528A1FC5400CD0D00 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3CD28A1FC5400CD0D00 /* Title.swift */; };
+		B6ABC3D628A1FC5400CD0D00 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3CE28A1FC5400CD0D00 /* Message.swift */; };
+		B6ABC3D728A1FC5400CD0D00 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3CF28A1FC5400CD0D00 /* TargetType.swift */; };
+		B6ABC3D828A1FC5400CD0D00 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3D028A1FC5400CD0D00 /* Status.swift */; };
+		B6ABC3D928A1FC5400CD0D00 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3D128A1FC5400CD0D00 /* Notification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +48,6 @@
 		B6ABC37928A1F79100CD0D00 /* Gapo-Notification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gapo-Notification.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6ABC37C28A1F79100CD0D00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6ABC37E28A1F79100CD0D00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B6ABC38028A1F79100CD0D00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B6ABC38328A1F79100CD0D00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6ABC38528A1F79700CD0D00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6ABC38828A1F79700CD0D00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6ABC38A28A1F79700CD0D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,18 @@
 		B6ABC39928A1F79800CD0D00 /* Gapo-NotificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gapo-NotificationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6ABC39D28A1F79800CD0D00 /* Gapo_NotificationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gapo_NotificationUITests.swift; sourceTree = "<group>"; };
 		B6ABC39F28A1F79800CD0D00 /* Gapo_NotificationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gapo_NotificationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B6ABC3AC28A1F89600CD0D00 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		B6ABC3AD28A1F89600CD0D00 /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		B6ABC3B028A1FB1D00CD0D00 /* noti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = noti.json; path = ../../../Downloads/noti.json; sourceTree = "<group>"; };
+		B6ABC3CA28A1FC5300CD0D00 /* DataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataItem.swift; path = ../../../../.Trash/DataItem.swift; sourceTree = "<group>"; };
+		B6ABC3CB28A1FC5400CD0D00 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Subscription.swift; path = ../../../../.Trash/Subscription.swift; sourceTree = "<group>"; };
+		B6ABC3CC28A1FC5400CD0D00 /* Highlight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Highlight.swift; path = ../../../../.Trash/Highlight.swift; sourceTree = "<group>"; };
+		B6ABC3CD28A1FC5400CD0D00 /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Title.swift; path = ../../../../.Trash/Title.swift; sourceTree = "<group>"; };
+		B6ABC3CE28A1FC5400CD0D00 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = ../../../../.Trash/Message.swift; sourceTree = "<group>"; };
+		B6ABC3CF28A1FC5400CD0D00 /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TargetType.swift; path = ../../../../.Trash/TargetType.swift; sourceTree = "<group>"; };
+		B6ABC3D028A1FC5400CD0D00 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Status.swift; path = ../../../../.Trash/Status.swift; sourceTree = "<group>"; };
+		B6ABC3D128A1FC5400CD0D00 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notification.swift; path = ../../../../.Trash/Notification.swift; sourceTree = "<group>"; };
+		B6ABC3DA28A1FC8800CD0D00 /* noti.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = noti.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +118,12 @@
 		B6ABC37B28A1F79100CD0D00 /* Gapo-Notification */ = {
 			isa = PBXGroup;
 			children = (
+				B6ABC3C928A1FBC900CD0D00 /* JSON */,
 				B6ABC37C28A1F79100CD0D00 /* AppDelegate.swift */,
 				B6ABC37E28A1F79100CD0D00 /* SceneDelegate.swift */,
-				B6ABC38028A1F79100CD0D00 /* ViewController.swift */,
-				B6ABC38228A1F79100CD0D00 /* Main.storyboard */,
+				B6ABC3AC28A1F89600CD0D00 /* MyViewController.swift */,
+				B6ABC3B028A1FB1D00CD0D00 /* noti.json */,
+				B6ABC3AD28A1F89600CD0D00 /* MyViewController.xib */,
 				B6ABC38528A1F79700CD0D00 /* Assets.xcassets */,
 				B6ABC38728A1F79700CD0D00 /* LaunchScreen.storyboard */,
 				B6ABC38A28A1F79700CD0D00 /* Info.plist */,
@@ -125,6 +146,22 @@
 				B6ABC39F28A1F79800CD0D00 /* Gapo_NotificationUITestsLaunchTests.swift */,
 			);
 			path = "Gapo-NotificationUITests";
+			sourceTree = "<group>";
+		};
+		B6ABC3C928A1FBC900CD0D00 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				B6ABC3DA28A1FC8800CD0D00 /* noti.json */,
+				B6ABC3CA28A1FC5300CD0D00 /* DataItem.swift */,
+				B6ABC3CC28A1FC5400CD0D00 /* Highlight.swift */,
+				B6ABC3CE28A1FC5400CD0D00 /* Message.swift */,
+				B6ABC3D128A1FC5400CD0D00 /* Notification.swift */,
+				B6ABC3D028A1FC5400CD0D00 /* Status.swift */,
+				B6ABC3CB28A1FC5400CD0D00 /* Subscription.swift */,
+				B6ABC3CF28A1FC5400CD0D00 /* TargetType.swift */,
+				B6ABC3CD28A1FC5400CD0D00 /* Title.swift */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +270,8 @@
 			files = (
 				B6ABC38928A1F79700CD0D00 /* LaunchScreen.storyboard in Resources */,
 				B6ABC38628A1F79700CD0D00 /* Assets.xcassets in Resources */,
-				B6ABC38428A1F79100CD0D00 /* Main.storyboard in Resources */,
+				B6ABC3AF28A1F89600CD0D00 /* MyViewController.xib in Resources */,
+				B6ABC3B128A1FB1D00CD0D00 /* noti.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +296,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6ABC38128A1F79100CD0D00 /* ViewController.swift in Sources */,
 				B6ABC37D28A1F79100CD0D00 /* AppDelegate.swift in Sources */,
+				B6ABC3D828A1FC5400CD0D00 /* Status.swift in Sources */,
+				B6ABC3AE28A1F89600CD0D00 /* MyViewController.swift in Sources */,
+				B6ABC3D528A1FC5400CD0D00 /* Title.swift in Sources */,
+				B6ABC3D728A1FC5400CD0D00 /* TargetType.swift in Sources */,
+				B6ABC3D228A1FC5400CD0D00 /* DataItem.swift in Sources */,
 				B6ABC37F28A1F79100CD0D00 /* SceneDelegate.swift in Sources */,
+				B6ABC3D628A1FC5400CD0D00 /* Message.swift in Sources */,
+				B6ABC3D928A1FC5400CD0D00 /* Notification.swift in Sources */,
+				B6ABC3D428A1FC5400CD0D00 /* Highlight.swift in Sources */,
+				B6ABC3D328A1FC5400CD0D00 /* Subscription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +343,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B6ABC38228A1F79100CD0D00 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B6ABC38328A1F79100CD0D00 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B6ABC38728A1F79700CD0D00 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -443,7 +481,6 @@
 				INFOPLIST_FILE = "Gapo-Notification/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +507,6 @@
 				INFOPLIST_FILE = "Gapo-Notification/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
