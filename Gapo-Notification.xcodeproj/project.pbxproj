@@ -17,14 +17,16 @@
 		B6ABC3AE28A1F89600CD0D00 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3AC28A1F89600CD0D00 /* MyViewController.swift */; };
 		B6ABC3AF28A1F89600CD0D00 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6ABC3AD28A1F89600CD0D00 /* MyViewController.xib */; };
 		B6ABC3B128A1FB1D00CD0D00 /* noti.json in Resources */ = {isa = PBXBuildFile; fileRef = B6ABC3B028A1FB1D00CD0D00 /* noti.json */; };
-		B6ABC3D228A1FC5400CD0D00 /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3CA28A1FC5300CD0D00 /* DataItem.swift */; };
-		B6ABC3D328A1FC5400CD0D00 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3CB28A1FC5400CD0D00 /* Subscription.swift */; };
-		B6ABC3D428A1FC5400CD0D00 /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3CC28A1FC5400CD0D00 /* Highlight.swift */; };
-		B6ABC3D528A1FC5400CD0D00 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3CD28A1FC5400CD0D00 /* Title.swift */; };
-		B6ABC3D628A1FC5400CD0D00 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3CE28A1FC5400CD0D00 /* Message.swift */; };
-		B6ABC3D728A1FC5400CD0D00 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3CF28A1FC5400CD0D00 /* TargetType.swift */; };
-		B6ABC3D828A1FC5400CD0D00 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3D028A1FC5400CD0D00 /* Status.swift */; };
-		B6ABC3D928A1FC5400CD0D00 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3D128A1FC5400CD0D00 /* Notification.swift */; };
+		B6ABC3DD28A204F700CD0D00 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3DB28A204F700CD0D00 /* CustomTableViewCell.swift */; };
+		B6ABC3DE28A204F700CD0D00 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6ABC3DC28A204F700CD0D00 /* CustomTableViewCell.xib */; };
+		B6ABC3E028A3695500CD0D00 /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3DF28A3695400CD0D00 /* DataItem.swift */; };
+		B6ABC3E228A3696700CD0D00 /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3E128A3696700CD0D00 /* Highlight.swift */; };
+		B6ABC3E428A3697400CD0D00 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3E328A3697300CD0D00 /* Message.swift */; };
+		B6ABC3E628A3697F00CD0D00 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3E528A3697F00CD0D00 /* Notification.swift */; };
+		B6ABC3E828A3699300CD0D00 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3E728A3699300CD0D00 /* Status.swift */; };
+		B6ABC3EA28A3699D00CD0D00 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3E928A3699D00CD0D00 /* Subscription.swift */; };
+		B6ABC3EC28A369A800CD0D00 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3EB28A369A800CD0D00 /* TargetType.swift */; };
+		B6ABC3EE28A369B300CD0D00 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3ED28A369B300CD0D00 /* Title.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,15 +61,17 @@
 		B6ABC3AC28A1F89600CD0D00 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		B6ABC3AD28A1F89600CD0D00 /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
 		B6ABC3B028A1FB1D00CD0D00 /* noti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = noti.json; path = ../../../Downloads/noti.json; sourceTree = "<group>"; };
-		B6ABC3CA28A1FC5300CD0D00 /* DataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataItem.swift; path = ../../../../.Trash/DataItem.swift; sourceTree = "<group>"; };
-		B6ABC3CB28A1FC5400CD0D00 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Subscription.swift; path = ../../../../.Trash/Subscription.swift; sourceTree = "<group>"; };
-		B6ABC3CC28A1FC5400CD0D00 /* Highlight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Highlight.swift; path = ../../../../.Trash/Highlight.swift; sourceTree = "<group>"; };
-		B6ABC3CD28A1FC5400CD0D00 /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Title.swift; path = ../../../../.Trash/Title.swift; sourceTree = "<group>"; };
-		B6ABC3CE28A1FC5400CD0D00 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = ../../../../.Trash/Message.swift; sourceTree = "<group>"; };
-		B6ABC3CF28A1FC5400CD0D00 /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TargetType.swift; path = ../../../../.Trash/TargetType.swift; sourceTree = "<group>"; };
-		B6ABC3D028A1FC5400CD0D00 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Status.swift; path = ../../../../.Trash/Status.swift; sourceTree = "<group>"; };
-		B6ABC3D128A1FC5400CD0D00 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notification.swift; path = ../../../../.Trash/Notification.swift; sourceTree = "<group>"; };
 		B6ABC3DA28A1FC8800CD0D00 /* noti.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = noti.json; sourceTree = "<group>"; };
+		B6ABC3DB28A204F700CD0D00 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		B6ABC3DC28A204F700CD0D00 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		B6ABC3DF28A3695400CD0D00 /* DataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
+		B6ABC3E128A3696700CD0D00 /* Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highlight.swift; sourceTree = "<group>"; };
+		B6ABC3E328A3697300CD0D00 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B6ABC3E528A3697F00CD0D00 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		B6ABC3E728A3699300CD0D00 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		B6ABC3E928A3699D00CD0D00 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		B6ABC3EB28A369A800CD0D00 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		B6ABC3ED28A369B300CD0D00 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,12 +122,11 @@
 		B6ABC37B28A1F79100CD0D00 /* Gapo-Notification */ = {
 			isa = PBXGroup;
 			children = (
+				B6ABC3EF28A3713200CD0D00 /* Controller */,
 				B6ABC3C928A1FBC900CD0D00 /* JSON */,
 				B6ABC37C28A1F79100CD0D00 /* AppDelegate.swift */,
 				B6ABC37E28A1F79100CD0D00 /* SceneDelegate.swift */,
-				B6ABC3AC28A1F89600CD0D00 /* MyViewController.swift */,
 				B6ABC3B028A1FB1D00CD0D00 /* noti.json */,
-				B6ABC3AD28A1F89600CD0D00 /* MyViewController.xib */,
 				B6ABC38528A1F79700CD0D00 /* Assets.xcassets */,
 				B6ABC38728A1F79700CD0D00 /* LaunchScreen.storyboard */,
 				B6ABC38A28A1F79700CD0D00 /* Info.plist */,
@@ -152,16 +155,43 @@
 			isa = PBXGroup;
 			children = (
 				B6ABC3DA28A1FC8800CD0D00 /* noti.json */,
-				B6ABC3CA28A1FC5300CD0D00 /* DataItem.swift */,
-				B6ABC3CC28A1FC5400CD0D00 /* Highlight.swift */,
-				B6ABC3CE28A1FC5400CD0D00 /* Message.swift */,
-				B6ABC3D128A1FC5400CD0D00 /* Notification.swift */,
-				B6ABC3D028A1FC5400CD0D00 /* Status.swift */,
-				B6ABC3CB28A1FC5400CD0D00 /* Subscription.swift */,
-				B6ABC3CF28A1FC5400CD0D00 /* TargetType.swift */,
-				B6ABC3CD28A1FC5400CD0D00 /* Title.swift */,
+				B6ABC3DF28A3695400CD0D00 /* DataItem.swift */,
+				B6ABC3E128A3696700CD0D00 /* Highlight.swift */,
+				B6ABC3E328A3697300CD0D00 /* Message.swift */,
+				B6ABC3E528A3697F00CD0D00 /* Notification.swift */,
+				B6ABC3E728A3699300CD0D00 /* Status.swift */,
+				B6ABC3E928A3699D00CD0D00 /* Subscription.swift */,
+				B6ABC3EB28A369A800CD0D00 /* TargetType.swift */,
+				B6ABC3ED28A369B300CD0D00 /* Title.swift */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		B6ABC3EF28A3713200CD0D00 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6ABC3F128A3714F00CD0D00 /* CustomViewCell */,
+				B6ABC3F028A3713C00CD0D00 /* ViewController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B6ABC3F028A3713C00CD0D00 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B6ABC3AD28A1F89600CD0D00 /* MyViewController.xib */,
+				B6ABC3AC28A1F89600CD0D00 /* MyViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B6ABC3F128A3714F00CD0D00 /* CustomViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B6ABC3DC28A204F700CD0D00 /* CustomTableViewCell.xib */,
+				B6ABC3DB28A204F700CD0D00 /* CustomTableViewCell.swift */,
+			);
+			path = CustomViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +300,7 @@
 			files = (
 				B6ABC38928A1F79700CD0D00 /* LaunchScreen.storyboard in Resources */,
 				B6ABC38628A1F79700CD0D00 /* Assets.xcassets in Resources */,
+				B6ABC3DE28A204F700CD0D00 /* CustomTableViewCell.xib in Resources */,
 				B6ABC3AF28A1F89600CD0D00 /* MyViewController.xib in Resources */,
 				B6ABC3B128A1FB1D00CD0D00 /* noti.json in Resources */,
 			);
@@ -296,17 +327,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6ABC3EE28A369B300CD0D00 /* Title.swift in Sources */,
+				B6ABC3DD28A204F700CD0D00 /* CustomTableViewCell.swift in Sources */,
 				B6ABC37D28A1F79100CD0D00 /* AppDelegate.swift in Sources */,
-				B6ABC3D828A1FC5400CD0D00 /* Status.swift in Sources */,
+				B6ABC3E228A3696700CD0D00 /* Highlight.swift in Sources */,
+				B6ABC3E828A3699300CD0D00 /* Status.swift in Sources */,
+				B6ABC3E628A3697F00CD0D00 /* Notification.swift in Sources */,
+				B6ABC3EA28A3699D00CD0D00 /* Subscription.swift in Sources */,
 				B6ABC3AE28A1F89600CD0D00 /* MyViewController.swift in Sources */,
-				B6ABC3D528A1FC5400CD0D00 /* Title.swift in Sources */,
-				B6ABC3D728A1FC5400CD0D00 /* TargetType.swift in Sources */,
-				B6ABC3D228A1FC5400CD0D00 /* DataItem.swift in Sources */,
+				B6ABC3EC28A369A800CD0D00 /* TargetType.swift in Sources */,
+				B6ABC3E028A3695500CD0D00 /* DataItem.swift in Sources */,
 				B6ABC37F28A1F79100CD0D00 /* SceneDelegate.swift in Sources */,
-				B6ABC3D628A1FC5400CD0D00 /* Message.swift in Sources */,
-				B6ABC3D928A1FC5400CD0D00 /* Notification.swift in Sources */,
-				B6ABC3D428A1FC5400CD0D00 /* Highlight.swift in Sources */,
-				B6ABC3D328A1FC5400CD0D00 /* Subscription.swift in Sources */,
+				B6ABC3E428A3697400CD0D00 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
