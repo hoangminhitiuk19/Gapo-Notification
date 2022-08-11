@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09412B024E028BD3378C2905 /* Pods_Gapo_Notification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E584603B6F36D863068A796D /* Pods_Gapo_Notification.framework */; };
+		8CA6D7A3372BA0AAD87B9552 /* Pods_Gapo_Notification_Gapo_NotificationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676824B89AC1817C895EE396 /* Pods_Gapo_Notification_Gapo_NotificationUITests.framework */; };
+		A1A146B6358895F8C5C93B5B /* Pods_Gapo_NotificationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B4439B649FB0F6ED929CA9 /* Pods_Gapo_NotificationTests.framework */; };
 		B6ABC37D28A1F79100CD0D00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC37C28A1F79100CD0D00 /* AppDelegate.swift */; };
 		B6ABC37F28A1F79100CD0D00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC37E28A1F79100CD0D00 /* SceneDelegate.swift */; };
 		B6ABC38628A1F79700CD0D00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6ABC38528A1F79700CD0D00 /* Assets.xcassets */; };
@@ -47,6 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51B4439B649FB0F6ED929CA9 /* Pods_Gapo_NotificationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gapo_NotificationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		676824B89AC1817C895EE396 /* Pods_Gapo_Notification_Gapo_NotificationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gapo_Notification_Gapo_NotificationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DE5FA0AC4B6EC771D70D559 /* Pods-Gapo-Notification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gapo-Notification.debug.xcconfig"; path = "Target Support Files/Pods-Gapo-Notification/Pods-Gapo-Notification.debug.xcconfig"; sourceTree = "<group>"; };
+		956EEDA371EEAF5EF2CE5006 /* Pods-Gapo-Notification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gapo-Notification.release.xcconfig"; path = "Target Support Files/Pods-Gapo-Notification/Pods-Gapo-Notification.release.xcconfig"; sourceTree = "<group>"; };
+		A7C43A440D5BF346C9E2B731 /* Pods-Gapo-NotificationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gapo-NotificationTests.debug.xcconfig"; path = "Target Support Files/Pods-Gapo-NotificationTests/Pods-Gapo-NotificationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A7FD974B42A228AE13626FDF /* Pods-Gapo-Notification-Gapo-NotificationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gapo-Notification-Gapo-NotificationUITests.debug.xcconfig"; path = "Target Support Files/Pods-Gapo-Notification-Gapo-NotificationUITests/Pods-Gapo-Notification-Gapo-NotificationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6ABC37928A1F79100CD0D00 /* Gapo-Notification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gapo-Notification.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6ABC37C28A1F79100CD0D00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6ABC37E28A1F79100CD0D00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +81,9 @@
 		B6ABC3E928A3699D00CD0D00 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		B6ABC3EB28A369A800CD0D00 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		B6ABC3ED28A369B300CD0D00 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		B7052E08858B3E2396C9D4D0 /* Pods-Gapo-NotificationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gapo-NotificationTests.release.xcconfig"; path = "Target Support Files/Pods-Gapo-NotificationTests/Pods-Gapo-NotificationTests.release.xcconfig"; sourceTree = "<group>"; };
+		B814FFE9569E77B9D523453F /* Pods-Gapo-Notification-Gapo-NotificationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gapo-Notification-Gapo-NotificationUITests.release.xcconfig"; path = "Target Support Files/Pods-Gapo-Notification-Gapo-NotificationUITests/Pods-Gapo-Notification-Gapo-NotificationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E584603B6F36D863068A796D /* Pods_Gapo_Notification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gapo_Notification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09412B024E028BD3378C2905 /* Pods_Gapo_Notification.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A146B6358895F8C5C93B5B /* Pods_Gapo_NotificationTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,12 +107,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CA6D7A3372BA0AAD87B9552 /* Pods_Gapo_Notification_Gapo_NotificationUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F77886202B1863DFC7BA03A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E584603B6F36D863068A796D /* Pods_Gapo_Notification.framework */,
+				676824B89AC1817C895EE396 /* Pods_Gapo_Notification_Gapo_NotificationUITests.framework */,
+				51B4439B649FB0F6ED929CA9 /* Pods_Gapo_NotificationTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96B035B3187ACE9F42AB9600 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DE5FA0AC4B6EC771D70D559 /* Pods-Gapo-Notification.debug.xcconfig */,
+				956EEDA371EEAF5EF2CE5006 /* Pods-Gapo-Notification.release.xcconfig */,
+				A7FD974B42A228AE13626FDF /* Pods-Gapo-Notification-Gapo-NotificationUITests.debug.xcconfig */,
+				B814FFE9569E77B9D523453F /* Pods-Gapo-Notification-Gapo-NotificationUITests.release.xcconfig */,
+				A7C43A440D5BF346C9E2B731 /* Pods-Gapo-NotificationTests.debug.xcconfig */,
+				B7052E08858B3E2396C9D4D0 /* Pods-Gapo-NotificationTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B6ABC37028A1F79100CD0D00 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +145,8 @@
 				B6ABC39228A1F79800CD0D00 /* Gapo-NotificationTests */,
 				B6ABC39C28A1F79800CD0D00 /* Gapo-NotificationUITests */,
 				B6ABC37A28A1F79100CD0D00 /* Products */,
+				96B035B3187ACE9F42AB9600 /* Pods */,
+				5F77886202B1863DFC7BA03A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6ABC3A328A1F79800CD0D00 /* Build configuration list for PBXNativeTarget "Gapo-Notification" */;
 			buildPhases = (
+				7E1AD8BD31FA8C953B7C0FA2 /* [CP] Check Pods Manifest.lock */,
 				B6ABC37528A1F79100CD0D00 /* Sources */,
 				B6ABC37628A1F79100CD0D00 /* Frameworks */,
 				B6ABC37728A1F79100CD0D00 /* Resources */,
+				3F4DA236122CD639AF5C3A10 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,6 +261,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6ABC3A628A1F79800CD0D00 /* Build configuration list for PBXNativeTarget "Gapo-NotificationTests" */;
 			buildPhases = (
+				256BA5AB2314698E26624CEA /* [CP] Check Pods Manifest.lock */,
 				B6ABC38B28A1F79800CD0D00 /* Sources */,
 				B6ABC38C28A1F79800CD0D00 /* Frameworks */,
 				B6ABC38D28A1F79800CD0D00 /* Resources */,
@@ -236,9 +280,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6ABC3A928A1F79800CD0D00 /* Build configuration list for PBXNativeTarget "Gapo-NotificationUITests" */;
 			buildPhases = (
+				4B30C6B3804635DB3838C6B0 /* [CP] Check Pods Manifest.lock */,
 				B6ABC39528A1F79800CD0D00 /* Sources */,
 				B6ABC39628A1F79800CD0D00 /* Frameworks */,
 				B6ABC39728A1F79800CD0D00 /* Resources */,
+				0A588E07DFB69C43B9139B19 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -321,6 +367,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A588E07DFB69C43B9139B19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gapo-Notification-Gapo-NotificationUITests/Pods-Gapo-Notification-Gapo-NotificationUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gapo-Notification-Gapo-NotificationUITests/Pods-Gapo-Notification-Gapo-NotificationUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gapo-Notification-Gapo-NotificationUITests/Pods-Gapo-Notification-Gapo-NotificationUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		256BA5AB2314698E26624CEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gapo-NotificationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F4DA236122CD639AF5C3A10 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gapo-Notification/Pods-Gapo-Notification-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gapo-Notification/Pods-Gapo-Notification-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gapo-Notification/Pods-Gapo-Notification-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B30C6B3804635DB3838C6B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gapo-Notification-Gapo-NotificationUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E1AD8BD31FA8C953B7C0FA2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gapo-Notification-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B6ABC37528A1F79100CD0D00 /* Sources */ = {
@@ -504,6 +653,7 @@
 		};
 		B6ABC3A428A1F79800CD0D00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DE5FA0AC4B6EC771D70D559 /* Pods-Gapo-Notification.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -530,6 +680,7 @@
 		};
 		B6ABC3A528A1F79800CD0D00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 956EEDA371EEAF5EF2CE5006 /* Pods-Gapo-Notification.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -556,6 +707,7 @@
 		};
 		B6ABC3A728A1F79800CD0D00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7C43A440D5BF346C9E2B731 /* Pods-Gapo-NotificationTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -575,6 +727,7 @@
 		};
 		B6ABC3A828A1F79800CD0D00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7052E08858B3E2396C9D4D0 /* Pods-Gapo-NotificationTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -594,6 +747,7 @@
 		};
 		B6ABC3AA28A1F79800CD0D00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7FD974B42A228AE13626FDF /* Pods-Gapo-Notification-Gapo-NotificationUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -611,6 +765,7 @@
 		};
 		B6ABC3AB28A1F79800CD0D00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B814FFE9569E77B9D523453F /* Pods-Gapo-Notification-Gapo-NotificationUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

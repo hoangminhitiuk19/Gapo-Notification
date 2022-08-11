@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MyViewController: UIViewController {
 
@@ -61,11 +62,9 @@ extension MyViewController : UITableViewDelegate, UITableViewDataSource {
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell",
                                                     for: indexPath) as? CustomTableViewCell {
-            let information = self.notifications[indexPath.row]
-            cell.textField.text = information.message.text
-            cell.dateField.text = String(information.createdAt)
-            cell.avatarImage.downloaded(from: information.image)
-            cell.emotionImage.downloaded(from: information.icon)
+            cell.configure(text: notifications[indexPath.row].message.text,
+                           date: String(notifications[indexPath.row].createdAt),
+                           url: notifications[indexPath.row].image)
             return cell
         }
         return UITableViewCell()
@@ -73,7 +72,7 @@ extension MyViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
-        print("selected cell: ")
+        print("selected cell: \(notifications[indexPath.row].id)")
     }
     
     func tableView(_ tableView: UITableView,

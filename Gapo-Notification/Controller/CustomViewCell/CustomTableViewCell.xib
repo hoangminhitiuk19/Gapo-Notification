@@ -30,14 +30,14 @@
                             <constraint firstAttribute="width" constant="24" id="ckg-mF-JBn"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nr-1I-juV">
-                        <rect key="frame" x="78" y="22" width="207" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nr-1I-juV">
+                        <rect key="frame" x="78" y="22" width="207" height="20.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4h-yo-yS1">
-                        <rect key="frame" x="79" y="43" width="41.333333333333343" height="20.333333333333329"/>
+                        <rect key="frame" x="79" y="46.333333333333336" width="41.333333333333343" height="20.333333333333336"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -61,7 +61,6 @@
                     <constraint firstItem="IxA-55-Hug" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Rdm-Fq-W2u"/>
                     <constraint firstItem="lLO-KC-LXW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="60" id="SSf-BA-t0u"/>
                     <constraint firstItem="g4h-yo-yS1" firstAttribute="leading" secondItem="lLO-KC-LXW" secondAttribute="trailing" constant="5" id="Tzq-Mt-pqD"/>
-                    <constraint firstAttribute="bottom" secondItem="9nr-1I-juV" secondAttribute="bottom" constant="41" id="VIE-Nd-hp2"/>
                     <constraint firstAttribute="bottom" secondItem="7hI-vt-GzN" secondAttribute="bottom" constant="1" id="dX5-id-Yae"/>
                     <constraint firstAttribute="bottom" secondItem="IxA-55-Hug" secondAttribute="bottom" constant="12" id="kQQ-ne-clO"/>
                     <constraint firstItem="g4h-yo-yS1" firstAttribute="top" secondItem="9nr-1I-juV" secondAttribute="bottom" constant="4" id="tob-4u-4EI"/>
