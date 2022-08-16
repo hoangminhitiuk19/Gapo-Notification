@@ -13,33 +13,35 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var textField: UILabel!
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var avatarImage: UIImageView!
-    @IBOutlet weak var emotionImage: UIImageView!
+    @IBOutlet weak var iconImage: UIImageView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         textField.lineBreakMode = .byWordWrapping
-        textField.sizeToFit()
         textField.numberOfLines = 2
-        textField.font = .systemFont(ofSize: 20,
-                                     weight: .regular)
-       // textField.text = information.message.text
-        dateField.font = .systemFont(ofSize: 15,
-                                     weight: .light)
+        avatarImage.makeRounded()
     }
 
-    public func configure(text: String,
+    public func configure(semiboldText: String,
+                          normalText: String,
                           date: String,
-                          url: String ) {
-        textField.text = text
+                          avatarURL: String,
+                          iconURL: String ) {
+        textField.attributedText = NSMutableAttributedString()
+            .semibold(semiboldText)
+            .normal(changeText(normalText: normalText,
+                               semiboldText: semiboldText))
         dateField.text = date
-        textField.layoutIfNeeded()
-        dateField.layoutIfNeeded()
-        avatarImage.sd_setImage(with: URL(string: url),
+        avatarImage.sd_setImage(with: URL(string: avatarURL),
                                 placeholderImage: nil,
                                 options: .continueInBackground,
                                 completed: nil)
+        iconImage.sd_setImage(with: URL(string: iconURL),
+                              placeholderImage: nil,
+                              options: .continueInBackground,
+                              completed: nil)
     }
     
     override func prepareForReuse() {
@@ -56,7 +58,55 @@ class CustomTableViewCell: UITableViewCell {
     
     
     @IBAction func tapSettingsButton(_ sender: UIButton) {
-        print("13")
+        print("ok settings button")
     }
     
+    func changeText (normalText: String, semiboldText: String) -> String {
+        var text: String = normalText
+        if normalText.contains(semiboldText) {
+            text = text.replacingOccurrences(of: semiboldText,
+                                             with: "",
+                                             options: NSString.CompareOptions.literal,
+                                             range: nil)
+        }
+        return text
+    }
+}
+
+extension UIImageView {
+    
+    func makeRounded() {
+        layer.cornerRadius = self.frame.height / 2
+        clipsToBounds = true
+    }
+}
+
+extension NSMutableAttributedString {
+    var fontSize:CGFloat { return 14 }
+    var semiFont:UIFont { return UIFont(name: "SF Pro Text-Semibold",
+                                        size: fontSize) ?? UIFont.boldSystemFont(ofSize: fontSize) }
+    var normalFont:UIFont { return UIFont(name: "SF Pro Text-Regular",
+                                          size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)}
+    
+    func semibold(_ value:String) -> NSMutableAttributedString {
+        
+        let attributes:[NSAttributedString.Key : Any] = [
+            .font : semiFont,
+        ]
+        
+        self.append(NSAttributedString(string: value,
+                                       attributes:attributes))
+        return self
+    }
+    
+    func normal(_ value:String) -> NSMutableAttributedString {
+        
+        let attributes:[NSAttributedString.Key : Any] = [
+            .font : normalFont,
+        ]
+        
+        self.append(NSAttributedString(string: value,
+                                       attributes:attributes))
+        return self
+    }
 }

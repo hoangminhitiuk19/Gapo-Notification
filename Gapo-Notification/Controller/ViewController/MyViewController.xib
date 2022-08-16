@@ -19,33 +19,18 @@
             <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông báo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hD0-jJ-Bmf">
-                    <rect key="frame" x="139.66666666666666" y="44" width="148.99999999999997" height="36"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="eio-xh-PNK">
-                    <rect key="frame" x="0.0" y="80" width="428" height="51"/>
-                    <textInputTraits key="textInputTraits"/>
-                </searchBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mxc-WV-uTa">
-                    <rect key="frame" x="0.0" y="124" width="428" height="768"/>
+                    <rect key="frame" x="0.0" y="44" width="428" height="848"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="eio-xh-PNK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="J6o-hA-PQY"/>
                 <constraint firstItem="Mxc-WV-uTa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JWq-cL-npv"/>
-                <constraint firstItem="eio-xh-PNK" firstAttribute="top" secondItem="hD0-jJ-Bmf" secondAttribute="bottom" id="OpL-B8-Okx"/>
+                <constraint firstItem="Mxc-WV-uTa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QYw-aL-ztH"/>
                 <constraint firstItem="Mxc-WV-uTa" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ZOy-nl-azN"/>
-                <constraint firstItem="hD0-jJ-Bmf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eVl-lI-4CX"/>
-                <constraint firstItem="Mxc-WV-uTa" firstAttribute="top" secondItem="hD0-jJ-Bmf" secondAttribute="bottom" constant="44" id="fra-Dy-s5D"/>
                 <constraint firstItem="Mxc-WV-uTa" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="joY-j7-yHv"/>
-                <constraint firstItem="hD0-jJ-Bmf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pdo-lH-BSZ"/>
-                <constraint firstItem="eio-xh-PNK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="rof-IM-Foh"/>
             </constraints>
             <point key="canvasLocation" x="131.77570093457942" y="73.866090712742988"/>
         </view>

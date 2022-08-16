@@ -30,6 +30,7 @@
 		B6ABC3EA28A3699D00CD0D00 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3E928A3699D00CD0D00 /* Subscription.swift */; };
 		B6ABC3EC28A369A800CD0D00 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3EB28A369A800CD0D00 /* TargetType.swift */; };
 		B6ABC3EE28A369B300CD0D00 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC3ED28A369B300CD0D00 /* Title.swift */; };
+		B6F124C528A9ED9000388AED /* SFProText.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6F124C428A9ED9000388AED /* SFProText.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		B6ABC3E928A3699D00CD0D00 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		B6ABC3EB28A369A800CD0D00 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		B6ABC3ED28A369B300CD0D00 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		B6F124C428A9ED9000388AED /* SFProText.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SFProText.ttf; path = ../../../../Downloads/Notification/SFProText.ttf; sourceTree = "<group>"; };
 		B7052E08858B3E2396C9D4D0 /* Pods-Gapo-NotificationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gapo-NotificationTests.release.xcconfig"; path = "Target Support Files/Pods-Gapo-NotificationTests/Pods-Gapo-NotificationTests.release.xcconfig"; sourceTree = "<group>"; };
 		B814FFE9569E77B9D523453F /* Pods-Gapo-Notification-Gapo-NotificationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gapo-Notification-Gapo-NotificationUITests.release.xcconfig"; path = "Target Support Files/Pods-Gapo-Notification-Gapo-NotificationUITests/Pods-Gapo-Notification-Gapo-NotificationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E584603B6F36D863068A796D /* Pods_Gapo_Notification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gapo_Notification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,7 +136,6 @@
 				A7C43A440D5BF346C9E2B731 /* Pods-Gapo-NotificationTests.debug.xcconfig */,
 				B7052E08858B3E2396C9D4D0 /* Pods-Gapo-NotificationTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -163,6 +164,7 @@
 		B6ABC37B28A1F79100CD0D00 /* Gapo-Notification */ = {
 			isa = PBXGroup;
 			children = (
+				B6F124C328A9ED5500388AED /* Font */,
 				B6ABC3EF28A3713200CD0D00 /* Controller */,
 				B6ABC3C928A1FBC900CD0D00 /* JSON */,
 				B6ABC37C28A1F79100CD0D00 /* AppDelegate.swift */,
@@ -233,6 +235,14 @@
 				B6ABC3DB28A204F700CD0D00 /* CustomTableViewCell.swift */,
 			);
 			path = CustomViewCell;
+			sourceTree = "<group>";
+		};
+		B6F124C328A9ED5500388AED /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B6F124C428A9ED9000388AED /* SFProText.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F124C528A9ED9000388AED /* SFProText.ttf in Resources */,
 				B6ABC38928A1F79700CD0D00 /* LaunchScreen.storyboard in Resources */,
 				B6ABC38628A1F79700CD0D00 /* Assets.xcassets in Resources */,
 				B6ABC3DE28A204F700CD0D00 /* CustomTableViewCell.xib in Resources */,

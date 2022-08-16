@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
         
+        navigation.navigationBar.prefersLargeTitles = true
         return true
     }
 

@@ -5,22 +5,43 @@
 //  Created by Dung on 8/9/22.
 //
 
+
+
+/*
+ TO DO LIST :                                                                       CHECKBOX
+ 1. Import Font                                                     ||                  X
+ 2. Atributed text: CHu Duc Minh is semibold, other is regular      ||                  X
+ 3. Round Avatar                                                    ||                  X
+ 4. Emoji display                                                   ||                  X
+ 5. Read and unread state                                           ||                  X
+ 6. Search                                                          ||                  O
+ */
+
 import UIKit
 import SDWebImage
 
-class MyViewController: UIViewController {
+class MyViewController: UIViewController, UISearchBarDelegate {
+    
+    
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchButton: UIButton!
     
+    let searchController = UISearchController(searchResultsController: nil)
+
     var notifications = [DataItem]()
+    
+    var messageText = [Message]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         parseJSON()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Thông báo"
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.registerTableViewCells()
+        setupSearchBar()
+        
     }
 
     func parseJSON() {
@@ -32,6 +53,7 @@ class MyViewController: UIViewController {
             let result = try JSONDecoder().decode(Notification.self,
                                                   from: jsonData)
             self.notifications = result.data
+            
             self.tableView.reloadData()
         } catch {
             print("Error: \(error)")
@@ -43,6 +65,27 @@ class MyViewController: UIViewController {
                                   bundle: nil)
         self.tableView.register(textFieldCell,
                                 forCellReuseIdentifier: "CustomTableViewCell")
+    }
+    
+    private func setupSearchBar() {
+          definesPresentationContext = true
+          navigationItem.searchController = self.searchController
+          navigationItem.hidesSearchBarWhenScrolling = false
+          searchController.searchBar.delegate = self
+          let textFieldInsideSearchBar = searchController.searchBar.value(forKey: "searchField") as? UITextField
+          textFieldInsideSearchBar?.placeholder = "Tìm kiếm"
+      }
+    
+    func checkState(state: String, cell: CustomTableViewCell) {
+        if state == "read" {
+            cell.backgroundColor = .white
+        } else {
+            cell.backgroundColor = UIColor(rgb: 0xECF7E7)
+        }
+    }
+    
+    func search(){
+    
     }
 }
 
@@ -62,48 +105,52 @@ extension MyViewController : UITableViewDelegate, UITableViewDataSource {
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell",
                                                     for: indexPath) as? CustomTableViewCell {
-            cell.configure(text: notifications[indexPath.row].message.text,
-                           date: String(notifications[indexPath.row].createdAt),
-                           url: notifications[indexPath.row].image)
+            let datas = notifications[indexPath.row]
+            cell.configure(semiboldText: datas.subjectName,
+                           normalText: datas.message.text,
+                           date: String(datas.createdAt),
+                           avatarURL: datas.image,
+                           iconURL: datas.icon)
+            checkState(state: datas.status.rawValue,
+                       cell: cell)
             return cell
+                
         }
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
-        print("selected cell: \(notifications[indexPath.row].id)")
+        print("selected cell: \(notifications[indexPath.row].status.rawValue)")
+        if notifications[indexPath.row].status.rawValue == "unread" {
+            notifications[indexPath.row].status = .read
+            tableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView,
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return UITableView.automaticDimension
     }
 }
 
 
-extension UIImageView {
-    func downloaded(from url: URL,
-                    contentMode mode: ContentMode = .scaleAspectFit) {
-        contentMode = mode
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
-                let image = UIImage(data: data)
-                else { return }
-            DispatchQueue.main.async() { [weak self] in
-                self?.image = image
-            }
-        }.resume()
-    }
-    func downloaded(from link: String,
-                    contentMode mode: ContentMode = .scaleAspectFit) {
-        guard let url = URL(string: link) else { return }
-        downloaded(from: url, contentMode: mode)
-    }
-}
+extension UIColor {
+   convenience init(red: Int, green: Int, blue: Int) {
+       assert(red >= 0 && red <= 255, "Invalid red component")
+       assert(green >= 0 && green <= 255, "Invalid green component")
+       assert(blue >= 0 && blue <= 255, "Invalid blue component")
 
+       self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+   }
+
+   convenience init(rgb: Int) {
+       self.init(
+           red: (rgb >> 16) & 0xFF,
+           green: (rgb >> 8) & 0xFF,
+           blue: rgb & 0xFF
+       )
+   }
+}
 
 
