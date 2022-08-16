@@ -2,20 +2,8 @@
 //  MyViewController.swift
 //  Gapo-Notification
 //
-//  Created by Dung on 8/9/22.
+//  Created by Minh on 8/9/22.
 //
-
-
-
-/*
- TO DO LIST :                                                                       CHECKBOX
- 1. Import Font                                                     ||                  X
- 2. Atributed text: CHu Duc Minh is semibold, other is regular      ||                  X
- 3. Round Avatar                                                    ||                  X
- 4. Emoji display                                                   ||                  X
- 5. Read and unread state                                           ||                  X
- 6. Search                                                          ||                  O
- */
 
 import UIKit
 import SDWebImage
@@ -29,8 +17,8 @@ class MyViewController: UIViewController, UISearchBarDelegate {
     let searchController = UISearchController(searchResultsController: nil)
 
     var notifications = [DataItem]()
-    
-    var messageText = [Message]()
+    var searchResults = [DataItem]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +29,9 @@ class MyViewController: UIViewController, UISearchBarDelegate {
         self.tableView.delegate = self
         self.registerTableViewCells()
         setupSearchBar()
-        
+        searchResults = notifications
     }
-
+// PARSE JSON
     func parseJSON() {
         guard let path = Bundle.main.path(forResource: "noti",
                                           ofType: "json") else { return }
@@ -59,14 +47,14 @@ class MyViewController: UIViewController, UISearchBarDelegate {
             print("Error: \(error)")
         }
     }
-
+    //------------------------------------------
     private func registerTableViewCells() {
         let textFieldCell = UINib(nibName: "CustomTableViewCell",
                                   bundle: nil)
         self.tableView.register(textFieldCell,
                                 forCellReuseIdentifier: "CustomTableViewCell")
     }
-    
+    //------------------------------------------
     private func setupSearchBar() {
           definesPresentationContext = true
           navigationItem.searchController = self.searchController
@@ -75,17 +63,38 @@ class MyViewController: UIViewController, UISearchBarDelegate {
           let textFieldInsideSearchBar = searchController.searchBar.value(forKey: "searchField") as? UITextField
           textFieldInsideSearchBar?.placeholder = "Tìm kiếm"
       }
-    
-    func checkState(state: String, cell: CustomTableViewCell) {
+    //------------------------------------------
+    func checkState(state: String,
+                    cell: CustomTableViewCell) {
         if state == "read" {
-            cell.backgroundColor = .white
+            cell.backgroundColor = UIColor(rgb: 0xFFFFFF)
         } else {
             cell.backgroundColor = UIColor(rgb: 0xECF7E7)
         }
     }
-    
-    func search(){
-    
+    //------------------------------------------
+    func createDateTime(timestamp: String) -> String {
+        var strDate = ""
+        if let unixTime = Double(timestamp) {
+            let date = Date(timeIntervalSince1970: unixTime)
+            let dateFormatter = DateFormatter()
+            let timezone = TimeZone.current.abbreviation() ?? "GET"
+            dateFormatter.timeZone = TimeZone(abbreviation: timezone)
+            dateFormatter.locale = NSLocale.current
+            dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+            strDate = dateFormatter.string(from: date)
+        }
+        return strDate
+    }
+    //------------------------------------------
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText != "" {
+            searchResults = notifications.filter{ $0.message.text.lowercased().contains(searchText.lowercased()) }
+            tableView.reloadData()
+        } else {
+            searchResults = notifications
+            tableView.reloadData()
+        }
     }
 }
 
@@ -98,43 +107,48 @@ extension MyViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        return notifications.count
+        return searchController.isActive ? searchResults.count : notifications.count
     }
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell",
                                                     for: indexPath) as? CustomTableViewCell {
-            let datas = notifications[indexPath.row]
+            var datas = notifications[indexPath.row]
+            if searchController.isActive {
+                datas = searchResults[indexPath.row]
+            } else {
+                datas = notifications[indexPath.row]
+            }
             cell.configure(semiboldText: datas.subjectName,
                            normalText: datas.message.text,
-                           date: String(datas.createdAt),
+                           date: createDateTime(timestamp: String(datas.createdAt)),
                            avatarURL: datas.image,
                            iconURL: datas.icon)
             checkState(state: datas.status.rawValue,
                        cell: cell)
             return cell
-                
         }
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
-        print("selected cell: \(notifications[indexPath.row].status.rawValue)")
         if notifications[indexPath.row].status.rawValue == "unread" {
             notifications[indexPath.row].status = .read
-            tableView.reloadData()
+            tableView.reloadRows(at: [indexPath], with: .none)
+        } else {
+            tableView.reloadRows(at: [indexPath], with: .none)
         }
     }
-    
+    // Tableview cells automatically set height
     func tableView(_ tableView: UITableView,
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
 }
 
-
+// Update to use RGB
 extension UIColor {
    convenience init(red: Int, green: Int, blue: Int) {
        assert(red >= 0 && red <= 255, "Invalid red component")
@@ -152,5 +166,4 @@ extension UIColor {
        )
    }
 }
-
 

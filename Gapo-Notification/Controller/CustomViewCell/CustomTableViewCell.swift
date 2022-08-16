@@ -2,10 +2,27 @@
 //  CustomeTableViewCell.swift
 //  Gapo-Notification
 //
-//  Created by Dung on 8/9/22.
+//  Created by Minh on 8/9/22.
 //
 
 import UIKit
+
+extension UIFont {
+    static var appFontSize:CGFloat { return 14 }
+    
+    static var appNormalFont: UIFont {
+        return UIFont(name: "SF Pro Text-Regular",
+                      size: appFontSize)
+                ?? UIFont.systemFont(ofSize: appFontSize)
+        
+    }
+    
+    static var appSemiFont: UIFont {
+        return UIFont(name: "SF Pro Text-Semibold",
+                      size: appFontSize)
+                ?? UIFont.boldSystemFont(ofSize: appFontSize)
+    }
+}
 
 class CustomTableViewCell: UITableViewCell {
 
@@ -18,7 +35,6 @@ class CustomTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         textField.lineBreakMode = .byWordWrapping
         textField.numberOfLines = 2
         avatarImage.makeRounded()
@@ -29,10 +45,18 @@ class CustomTableViewCell: UITableViewCell {
                           date: String,
                           avatarURL: String,
                           iconURL: String ) {
-        textField.attributedText = NSMutableAttributedString()
-            .semibold(semiboldText)
-            .normal(changeText(normalText: normalText,
-                               semiboldText: semiboldText))
+        
+        let attributes: [NSAttributedString.Key : Any] = [
+            .font : UIFont.appNormalFont,
+        ]
+        let boldAttributes: [NSAttributedString.Key : Any] = [
+            .font : UIFont.appSemiFont,
+        ]
+        let attributedText = NSMutableAttributedString(string: normalText,
+                                                       attributes: attributes)
+        let range = (normalText as NSString).range(of: semiboldText)
+        attributedText.setAttributes(boldAttributes, range: range)
+        textField.attributedText = attributedText
         dateField.text = date
         avatarImage.sd_setImage(with: URL(string: avatarURL),
                                 placeholderImage: nil,
@@ -56,57 +80,16 @@ class CustomTableViewCell: UITableViewCell {
                           animated: animated)
     }
     
-    
     @IBAction func tapSettingsButton(_ sender: UIButton) {
         print("ok settings button")
-    }
-    
-    func changeText (normalText: String, semiboldText: String) -> String {
-        var text: String = normalText
-        if normalText.contains(semiboldText) {
-            text = text.replacingOccurrences(of: semiboldText,
-                                             with: "",
-                                             options: NSString.CompareOptions.literal,
-                                             range: nil)
-        }
-        return text
     }
 }
 
 extension UIImageView {
-    
     func makeRounded() {
         layer.cornerRadius = self.frame.height / 2
         clipsToBounds = true
     }
 }
 
-extension NSMutableAttributedString {
-    var fontSize:CGFloat { return 14 }
-    var semiFont:UIFont { return UIFont(name: "SF Pro Text-Semibold",
-                                        size: fontSize) ?? UIFont.boldSystemFont(ofSize: fontSize) }
-    var normalFont:UIFont { return UIFont(name: "SF Pro Text-Regular",
-                                          size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)}
-    
-    func semibold(_ value:String) -> NSMutableAttributedString {
-        
-        let attributes:[NSAttributedString.Key : Any] = [
-            .font : semiFont,
-        ]
-        
-        self.append(NSAttributedString(string: value,
-                                       attributes:attributes))
-        return self
-    }
-    
-    func normal(_ value:String) -> NSMutableAttributedString {
-        
-        let attributes:[NSAttributedString.Key : Any] = [
-            .font : normalFont,
-        ]
-        
-        self.append(NSAttributedString(string: value,
-                                       attributes:attributes))
-        return self
-    }
-}
+
